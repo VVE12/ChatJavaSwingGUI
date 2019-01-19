@@ -1,12 +1,10 @@
-package NetworkFolder;
-
-//14.Создаём интерфейс для работы с событиями (задаём варианты поведений), для прослушивания во входящем потоке.
+//14.We create an interface for working with events (we set options for behavior), for listening in the incoming stream.
 public interface ConnectionListener {
 
-    //15.Создаём методы для работы с соединением, передавая в качестве параметра сущность класса NetworkTCP.
-    void onConnectionReady(NetworkTCP networkTCP);//16.Создаём метод для подключённого соединения.
-    void onReceiveString(NetworkTCP networkTCP, String value);//17.Создаём метод для принятия строки, кроме сущности NetworkTCP, добавляем String value если хотим увидеть конкретно принятую строку.
-    void onDisconnect(NetworkTCP networkTCP);//18.Создаём метод для разорванного соединения.
-    void onException(NetworkTCP networkTCP, Exception e);//19.Создаём метод для исключений, отловленных в соединениях.
+    //15.We create methods for working with connections, passing the NetworkTCP class entity as a parameter.
+    void onConnectionReady(NetworkTCP networkTCP);//16.We create a method for the connected connection.
+    void onReceiveString(NetworkTCP networkTCP, String value);//17.We create a method for accepting a string, except for the NetworkTCP entity, add a String value if we want to see the specifically accepted string.
+    void onDisconnect(NetworkTCP networkTCP);//18.We create a method for a broken connection.
+    void onException(NetworkTCP networkTCP, Exception e);//19.We create a method for exceptions caught in connections.
 
 }
